@@ -7,8 +7,19 @@ import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import WorkIcon from '@mui/icons-material/Work';
 import MessageIcon from '@mui/icons-material/Message';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser } from './features/counter/userSlice';
 
 function Header() {
+	const user = useSelector(selectUser);
+
+	const dispatch = useDispatch();
+
+	const logoutOfApp = () => {
+		dispatch(Logout());
+		auth.signOut();
+	};
+
 	return (
 		<div className='header'>
 			{/* <h1>This is the header</h1> */}
@@ -29,7 +40,7 @@ function Header() {
 				<HeaderOption Icon={WorkIcon} title='Jobs' />
 				<HeaderOption Icon={MessageIcon} title='Messages' />
 				<HeaderOption Icon={NotificationsIcon} title='Notifications' />
-				<HeaderOption avatar='none' title='Me' />
+				<HeaderOption avatar={true} title='Me' onClick={logoutOfApp} />
 			</div>
 		</div>
 	);

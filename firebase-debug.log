@@ -1,0 +1,27 @@
+[debug] [2023-04-12T19:12:50.980Z] ----------------------------------------------------------------------
+[debug] [2023-04-12T19:12:50.983Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-04-12T19:12:50.983Z] CLI Version:   11.25.2
+[debug] [2023-04-12T19:12:50.984Z] Platform:      win32
+[debug] [2023-04-12T19:12:50.984Z] Node Version:  v18.12.1
+[debug] [2023-04-12T19:12:50.985Z] Time:          Wed Apr 12 2023 22:12:50 GMT+0300 (Eastern European Summer Time)
+[debug] [2023-04-12T19:12:50.985Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-12T19:12:50.995Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-12T19:12:50.996Z] > authorizing via signed-in user (ghadygergie0@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\HP\Desktop\Web Dev Zero To Hero\linkedin-clone
+
+[debug] [2023-04-12T19:13:11.322Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.

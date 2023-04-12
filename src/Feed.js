@@ -9,6 +9,7 @@ import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { db } from './Firebase';
 import firebase from 'firebase';
+import FlipMove from 'react-flip-move';
 
 function Feed() {
 	const [input, setInput] = useState('');
@@ -27,11 +28,11 @@ function Feed() {
 
 	const sendPost = (e) => {
 		db.collection('posts').add({
-			name: 'ghady Gergie',
-			description: 'this is just a test',
+			name: userEvent.displayName,
+			description: user.email,
 			message: input,
-			photoUrl: '',
-			timestamp: firebase.firestore.fieldValue.serverTimestamp(), 
+			photoUrl: user.photoUrl || '',
+			timestamp: firebase.firestore.fieldValue.serverTimestamp(),
 		});
 		e.preventDefault();
 	};
@@ -67,15 +68,17 @@ function Feed() {
 				</div>
 			</div>
 
-			{posts.map((post) => {
-				<Post />;
-			})}
-			{/* posts */}
-			<Post
-				name='Ghady Gergie'
-				desc='this is a test'
-				message='Wow this worked'
-			/>
+			<FlipMove>
+				{posts.map((post) => {
+					<Post />;
+				})}
+				{/* posts */}
+				<Post
+					name='Ghady Gergie'
+					desc='this is a test'
+					message='Wow this worked'
+				/>
+			</FlipMove>
 		</div>
 	);
 }
